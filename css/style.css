@@ -1,0 +1,114 @@
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #463f51;
+  background: linear-gradient(to right, rgba(214, 100, 40, 0.6), rgba(16, 11, 192, 0.5)), url("https://image.ibb.co/cHB5gx/architecture_bar_business_791810.jpg") center no-repeat;
+  background-size: cover;
+  height: 100vh; }
+
+a {
+  outline: none;
+  color: rgba(214, 100, 40, 0.6);
+  text-decoration: none;
+  transition: color 0.2s; }
+
+a:hover, a:focus {
+  color: #fff; }
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  padding: 0 0 4em;
+  height: 750px;
+  min-height: 100vh; }
+
+.tilt-figure,
+.tilt-image {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: block; }
+
+.tilt-figure {
+  position: relative;
+  z-index: 1; }
+
+.tilt-figure::before {
+  content: '';
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+  box-shadow: 0 30px 20px rgba(35, 32, 39, 0.6); }
+
+.tilt-deco {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+.tilt-deco--lines {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 3.5px; }
+
+.tilt-caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 4em; }
+
+.tilt-title {
+  margin: 0;
+  font-weight: normal;
+  font-size: 2.2em;
+  font-family: 'Roboto', serif;
+  line-height: 1; }
+
+.tilt-description {
+  margin: 1em 0 0 0;
+  font-size: 0.85em;
+  letter-spacing: 0.15em; }
+
+.tilt-one .tilt-deco--overlay {
+  background-image: linear-gradient(20deg, #d66428, rgba(46, 39, 173, 0.58), rgba(53, 74, 165, 0.6)); }
+
+.tilt-one .tilt-deco--lines {
+  transform: scale3d(0.8, 0.8, 1);
+  transition: transform 0.4s; }
+
+.tilt-one:hover .tilt-deco--lines {
+  transform: scale3d(1, 1, 1); }
+
+.tilt-one .tilt-title,
+.tilt-one .tilt-description {
+  transform: translate3d(0, 80px, 0);
+  opacity: 0;
+  transition: transform 0.4s, opacity 0.4s; }
+
+.tilt-one:hover .tilt-description {
+  transition-delay: 0.1s; }
+
+.tilt-one:hover .tilt-title,
+.tilt-one:hover .tilt-description {
+  transform: translate3d(0, 0, 0);
+  opacity: 1; }
+
+.svg-icon {
+  transform: translate3d(130px, -200px, 0);
+  opacity: 1;
+  transition: transform 0.4s, opacity 0.4s; }
+
+.tilt-one:hover .svg-icon {
+  transform: translate3d(130px, -250px, 0);
+  opacity: 0;
+  transition: transform 0.4s, opacity 0.4s; }
